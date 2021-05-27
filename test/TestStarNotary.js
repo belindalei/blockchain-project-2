@@ -94,7 +94,6 @@ it('lets 2 users exchange stars', async() => {
     await instance.createStar('Star1', tokenId1, {from: accounts[0]});
 
     let tokenId2 = 8;
-    let instance = await StarNotary.deployed();
     await instance.createStar('Star2', tokenId2, {from: accounts[1]});
     // 2. Call the exchangeStars functions implemented in the Smart Contract
     await instance.exchangeStars(tokenId1, tokenId2)
